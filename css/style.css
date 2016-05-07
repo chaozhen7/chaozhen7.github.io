@@ -1802,8 +1802,16 @@ pre .css ~ * .id {
     margin-left: 0;
     text-align: center;
   }
+  .instagram .album li {
+    width: 100%;
+    position: relative;
+    padding-bottom: 100%;
+    text-align: center;
+  }
   .instagram .album div.img-box {
     margin: 0;
+    width: 90%;
+    height: 90%;
   }
 }
 .switch-btn {
