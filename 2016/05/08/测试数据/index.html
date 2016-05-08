@@ -229,6 +229,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+        
+          
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#按位与-amp"><span class="toc-number">1.</span> <span class="toc-text">按位与(&)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按位或"><span class="toc-number">2.</span> <span class="toc-text">按位或(|)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按位非"><span class="toc-number">3.</span> <span class="toc-text">按位非(~)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按位异或"><span class="toc-number">4.</span> <span class="toc-text">按位异或(^)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有符号左移-lt-lt"><span class="toc-number">5.</span> <span class="toc-text">有符号左移(<<)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有符号右移-gt-gt"><span class="toc-number">6.</span> <span class="toc-text">有符号右移(>>)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无符号右移-gt-gt-gt"><span class="toc-number">7.</span> <span class="toc-text">无符号右移(>>>)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+             var _article = document.getElementsByClassName('article')[0];
+            <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+            setTimeout("_article.className += ' article2'",0); 
+            setTimeout("document.getElementById('toc').style.right = '15px'", 0);
+            </script>
+          
+        
         <p>我们可能很少在编程中用位运算，如果没深入学习，可能也很难理解。平时的数值运算，其实是要先转换成二进制再进行运算的，而位运算就是直接进行二进制运算，所以位运算的执行效率肯定是更高的。下面通过一些实例来加深对位运算的理解。</p>
 <a id="more"></a>
 <h3 id="按位与-amp"><a href="#按位与-amp" class="headerlink" title="按位与(&amp;)"></a>按位与(&amp;)</h3><p>&amp;&amp;运算符我们都知道，只有两个都为真，结果才为真。&amp;道理是一样的，只有两个数的值为1时，才返回1。例如1和3的按位与操作：</p>
