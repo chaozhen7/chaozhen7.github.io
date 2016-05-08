@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>相册 | Chaos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基本上所有的hexo主题默认都没有实现相册功能，一方面相册功能的需求较少，毕竟hexo主要是写博客用的；另一方面实现相册功能比较麻烦，比如说：
+
+图片放哪里，放在source文件夹中，需要解析成静态文件，图片一旦多的话就会解析的非常慢
+
+怎么批量获取图片url(文件名)，图片那么多，不可能一个一个的手动输入图片url
+
+等等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="相册">
+<meta property="og:url" content="http://yoursite.com/2016/05/08/相册/index.html">
+<meta property="og:site_name" content="Chaos">
+<meta property="og:description" content="基本上所有的hexo主题默认都没有实现相册功能，一方面相册功能的需求较少，毕竟hexo主要是写博客用的；另一方面实现相册功能比较麻烦，比如说：
+
+图片放哪里，放在source文件夹中，需要解析成静态文件，图片一旦多的话就会解析的非常慢
+
+怎么批量获取图片url(文件名)，图片那么多，不可能一个一个的手动输入图片url
+
+等等">
+<meta property="og:image" content="http://yoursite.com/assets/blogImg/20150108_68360c07b3d015595d520b6131a3ec97.png.jpg">
+<meta property="og:updated_time" content="2016-05-08T10:37:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="相册">
+<meta name="twitter:description" content="基本上所有的hexo主题默认都没有实现相册功能，一方面相册功能的需求较少，毕竟hexo主要是写博客用的；另一方面实现相册功能比较麻烦，比如说：
+
+图片放哪里，放在source文件夹中，需要解析成静态文件，图片一旦多的话就会解析的非常慢
+
+怎么批量获取图片url(文件名)，图片那么多，不可能一个一个的手动输入图片url
+
+等等">
+<meta name="twitter:image" content="http://yoursite.com/assets/blogImg/20150108_68360c07b3d015595d520b6131a3ec97.png.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Chaos" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://tva4.sinaimg.cn/crop.15.0.380.380.180/873251d1jw8f2kwzwbwywj20fc0ak76i.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Chaozhen7</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">清风徐来，水波不兴</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+							<li><a href="/tags/books">读书</a></li>
+				        
+							<li><a href="/photo">相册</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/books/" style="font-size: 20px;">books</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hexo相册/" style="font-size: 10px;">hexo相册</a> <a href="/tags/yilia主题/" style="font-size: 10px;">yilia主题</a> <a href="/tags/相册/" style="font-size: 10px;">相册</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">前路漫漫，冷静思考。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Chaozhen7</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://tva4.sinaimg.cn/crop.15.0.380.380.180/873251d1jw8f2kwzwbwywj20fc0ak76i.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Chaozhen7</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">清风徐来，水波不兴</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/tags/books">读书</a></li>
+		        
+					<li><a href="/photo">相册</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-相册" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/08/相册/" class="article-date">
+  	<time datetime="2016-05-08T10:35:51.000Z" itemprop="datePublished">2016-05-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      相册
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo相册/">hexo相册</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yilia主题/">yilia主题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/相册/">相册</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/hexo/">hexo</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#新建一个页面"><span class="toc-number">1.</span> <span class="toc-text">新建一个页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片位置"><span class="toc-number">2.</span> <span class="toc-text">图片位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取图片"><span class="toc-number">3.</span> <span class="toc-text">获取图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成html代码"><span class="toc-number">4.</span> <span class="toc-text">生成html代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成静态文件"><span class="toc-number">5.</span> <span class="toc-text">生成静态文件</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+             var _article = document.getElementsByClassName('article')[0];
+            <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+            setTimeout("_article.className += ' article2'",0); 
+            setTimeout("document.getElementById('toc').style.right = '15px'", 0);
+            </script>
+          
+        
+        <p><img src="/assets/blogImg/20150108_68360c07b3d015595d520b6131a3ec97.png.jpg" alt=""></p>
+<p>基本上所有的<code>hexo</code>主题默认都没有实现相册功能，一方面相册功能的需求较少，毕竟<code>hexo</code>主要是写博客用的；另一方面实现相册功能比较麻烦，比如说：</p>
+<ul>
+<li><p>图片放哪里，放在<code>source</code>文件夹中，需要解析成静态文件，图片一旦多的话就会解析的非常慢</p>
+</li>
+<li><p>怎么批量获取图片<code>url</code>(文件名)，图片那么多，不可能一个一个的手动输入图片<code>url</code></p>
+</li>
+<li><p>等等</p>
+</li>
+</ul>
+<a id="more"></a>
+<p>所以需要找到一个好的解决方法。</p>
+<p><strong>注意：本博客使用的是<code>yilia</code>主题，该主题作者<a href="https://github.com/litten" target="_blank" rel="external">litten</a>有实现了相册功能，但他是同步<code>instagram</code>的图片，我会用不同的方法实现一个相册功能。</strong></p>
+<h2 id="新建一个页面"><a href="#新建一个页面" class="headerlink" title="新建一个页面"></a>新建一个页面</h2><p><code>hexo new page &quot;photo&quot;</code></p>
+<p>执行上面命令，会在<code>source</code>文件夹中生成<code>photo</code>文件夹，打开<code>photo</code>文件夹中的<code>index.md</code>文件，修改内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 相册</span><br><span class="line">noDate: &apos;true&apos;</span><br><span class="line">---</span><br><span class="line">&lt;link type=&quot;text/css&quot; href=&quot;/fancybox/jquery.fancybox.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">&lt;div class=&quot;instagram&quot;&gt;&lt;section class=&quot;archives album&quot;&gt;&lt;ul class=&quot;img-box-ul&quot;&gt;&lt;/ul&gt;&lt;/section&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>相册的样式使用该主题作者的相册样式，如果大家使用其他主题，样式可以自己实现。</p>
+<h2 id="图片位置"><a href="#图片位置" class="headerlink" title="图片位置"></a>图片位置</h2><p>图片不能放在<code>source</code>文件中，因为需要编译成静态文件，非常慢，那放在哪好呢？一般我们会把博客备份到<code>github</code>，这样可以在不同电脑上写博客。那么我们也可以把相册一起上传到<code>github</code>，所以，在博客根目录下建一个放置图片的文件夹<code>photos</code>，这样你上传再多的图片都可以。</p>
+<h2 id="获取图片"><a href="#获取图片" class="headerlink" title="获取图片"></a>获取图片</h2><p>原生<code>js</code>不能很好的处理文件，所以用<code>js</code>并不能获取图片的文件名。虽然<code>js</code>不能处理文件，但是<code>nodejs</code>可以啊。在<code>source\photo</code>文件夹中新建一个<code>tool.js</code>文件，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&quot;use strict&quot;;</span><br><span class="line">const fs = require(&quot;fs&quot;);</span><br><span class="line">const path = &quot;../../photos&quot;;</span><br><span class="line"></span><br><span class="line">fs.readdir(path, function (err, files) &#123;</span><br><span class="line">    if (err) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    let arr = [];</span><br><span class="line">    (function iterator(index) &#123;</span><br><span class="line">        if (index == files.length) &#123;</span><br><span class="line">            fs.writeFile(&quot;output.json&quot;, JSON.stringify(arr, null, &quot;\t&quot;));</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        fs.stat(path + &quot;/&quot; + files[index], function (err, stats) &#123;</span><br><span class="line">            if (err) &#123;</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">            if (stats.isFile()) &#123;</span><br><span class="line">                arr.push(files[index]);</span><br><span class="line">            &#125;</span><br><span class="line">            iterator(index + 1);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;(0));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>tool.js</code>的作用是把所有的图片名称放在一个<code>json</code>文件中。运行<code>node tool.js</code>就会在<code>source\photo</code>下创建一个<code>output.json</code>文件。每次你要添加新图片时，都要运行<code>node tool.js</code>。</p>
+<p>有了这个<code>json</code>文件，接下来就要用到<code>js</code>生成<code>html</code>代码了。</p>
+<h2 id="生成html代码"><a href="#生成html代码" class="headerlink" title="生成html代码"></a>生成<code>html</code>代码</h2><p>在<code>yourBlog\themes\yilia\source\js</code>(<code>yourBlog</code>为你的博客根目录，将<code>yilia</code>替换为你使用的主题)文件夹下新建一个<code>photo.js</code>的文件夹。为什么在这里建呢？因为编译之后会出现在<code>public\js</code>文件夹中，博客使用的<code>js</code>都在这。<br><code>photo.js</code>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">define([], function () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        page: 1,</span><br><span class="line">        offset: 20,</span><br><span class="line">        init: function () &#123;</span><br><span class="line">            var that = this;</span><br><span class="line">            $.getJSON(&quot;/photo/output.json&quot;, function (data) &#123;</span><br><span class="line">                that.render(that.page, data);</span><br><span class="line"></span><br><span class="line">                that.scroll(data);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        render: function (page, data) &#123;</span><br><span class="line">            var begin = (page - 1) * this.offset;</span><br><span class="line">            var end = page * this.offset;</span><br><span class="line">            if (begin &gt;= data.length) return;</span><br><span class="line">            var html, li = &quot;&quot;;</span><br><span class="line">            for (var i = begin; i &lt; end &amp;&amp; i &lt; data.length; i++) &#123;</span><br><span class="line">                li += &apos;&lt;li&gt;&lt;div class=&quot;img-box&quot;&gt;&apos; +</span><br><span class="line">                    &apos;&lt;a class=&quot;img-bg&quot; rel=&quot;example_group&quot; href=&quot;https://github.com/lwzhang/blog/blob/master/photos/&apos; + data[i] + &apos;?raw=true&quot;&gt;&lt;/a&gt;&apos; +</span><br><span class="line">                    &apos;&lt;img lazy-src=&quot;https://github.com/lwzhang/blog/blob/master/photos/&apos; + data[i] + &apos;?raw=true&quot; /&gt;&apos; +</span><br><span class="line">                    &apos;&lt;/li&gt;&apos;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            $(&quot;.img-box-ul&quot;).append(li);</span><br><span class="line">            $(&quot;.img-box-ul&quot;).lazyload();</span><br><span class="line">            $(&quot;a[rel=example_group]&quot;).fancybox();</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        scroll: function (data) &#123;</span><br><span class="line">            var that = this;</span><br><span class="line">            $(window).scroll(function() &#123;</span><br><span class="line">                var windowPageYOffset = window.pageYOffset;</span><br><span class="line">                var windowPageYOffsetAddHeight = windowPageYOffset + window.innerHeight;</span><br><span class="line">                var sensitivity = 0;</span><br><span class="line"></span><br><span class="line">                var offsetTop = $(&quot;.instagram&quot;).offset().top + $(&quot;.instagram&quot;).height();</span><br><span class="line"></span><br><span class="line">                if (offsetTop &gt;= windowPageYOffset &amp;&amp; offsetTop &lt; windowPageYOffsetAddHeight + sensitivity) &#123;</span><br><span class="line">                    that.render(++that.page, data);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>其中<code>https://github.com/lwzhang/blog/blob/master/photos/&#39; + data[i] + &#39;?raw=true</code>是上传至<code>github</code>的图片链接。<br>因为不可能一次性将所有的图片都插入到页面中，所以我做了分页功能，一次加载20张图片。</p>
+<p>引入<code>photo.js</code>最直接的方法是在<code>index.md</code>文件中引入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: 相册</span><br><span class="line">noDate: &apos;true&apos;</span><br><span class="line">---</span><br><span class="line">&lt;link type=&quot;text/css&quot; href=&quot;/fancybox/jquery.fancybox.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">&lt;div class=&quot;instagram&quot;&gt;&lt;section class=&quot;archives album&quot;&gt;&lt;ul class=&quot;img-box-ul&quot;&gt;&lt;/ul&gt;&lt;/section&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=&quot;/js/photo.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>如果大家和我用的是同一主题，在<code>yourBlog\themes\yilia\source\js\main.js</code>文件末尾增加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if($(&quot;.instagram&quot;).length) &#123;</span><br><span class="line">    require([&apos;/js/photo.js&apos;, &apos;/fancybox/jquery.fancybox.js&apos;, &apos;/js/jquery.lazyload.js&apos;], function(obj) &#123;</span><br><span class="line">        obj.init();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果不是，看大家使用的主题有什么限制了。</p>
+<h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><p>别忘了要在主题的配置文件<code>_config.yml</code>的<code>menu</code>下添加一个相册的菜单：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  首页: /</span><br><span class="line">  归档: /archives</span><br><span class="line">  随笔: /tags/随笔</span><br><span class="line">  相册: photo</span><br></pre></td></tr></table></figure>
+<p>最后运行<code>hexo g</code>生成静态文件。就可以在本地查看或者上传<code>github</code>查看相册功能了。</p>
+<p>相册功能就完成了。</p>
+<hr>
+
+      
+    
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/08/测试数据/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">测试数据</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="相册" data-title="相册" data-url="http://yoursite.com/2016/05/08/相册/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"chaozhen7"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Chaozhen7
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+ <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+ </script> 
+  </div>
+</body>
+</html>
