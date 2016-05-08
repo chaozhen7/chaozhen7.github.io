@@ -108,10 +108,10 @@ require([], function (){
 	}
 
 	//相册需要的js
-	if($(".instagram").length) {
-    	require(['/js/photos.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
-        obj.init();
-    });
+// 	if($(".instagram").length) {
+//     	require(['/js/photos.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
+//         obj.init();
+//     });
 }
 	
 });
