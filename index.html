@@ -22,6 +22,38 @@
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" href="/css/style.css">
+
+
+<script> 
+  $(document).ready(function ($) {
+    // 利用 data-scroll 属性，滚动到任意 dom 元素
+    $.scrollto = function (scrolldom, scrolltime) {
+        $(scrolldom).click(function () {
+            var scrolltodom = $(this).attr("data-scroll");
+            $(this).addClass("active").siblings().removeClass("active");
+            $('html, body').animate({
+                scrollTop: $(scrolltodom).offset().top
+            }, scrolltime);
+            return false;
+        });
+    };
+    // 判断位置控制 返回顶部的显隐
+    if ($(window).width() > 800) {
+        var backTo = $("#back-to-top");
+        var backHeight = $(window).height() - 980 + 'px';
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 700 && backTo.css('top') === '-900px') {
+                backTo.css('top', backHeight);
+            }
+            else if ($(window).scrollTop() <= 700 && backTo.css('top') !== '-900px') {
+                backTo.css('top', '-900px');
+            }
+        });
+    }
+    // 启用
+    $.scrollto("#back-to-top", 800);
+  });
+  </script>
 </head>
 
 <body>
@@ -217,6 +249,9 @@
       
         <p>我们可能很少在编程中用位运算，如果没深入学习，可能也很难理解。平时的数值运算，其实是要先转换成二进制再进行运算的，而位运算就是直接进行二进制运算，所以位运算的执行效率肯定是更高的。下面通过一些实例来加深对位运算的理解。</p>
       
+      <div id="back-to-top" data-scroll="body">
+        <a href="#top" style="color:white"></a>
+      </div>
     </div>
     
     <div class="article-info article-info-index">
@@ -282,6 +317,9 @@
       
         <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
       
+      <div id="back-to-top" data-scroll="body">
+        <a href="#top" style="color:white"></a>
+      </div>
     </div>
     
     <div class="article-info article-info-index">
