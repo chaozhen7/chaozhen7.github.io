@@ -140,6 +140,13 @@ require([], function (){
     if(yiliaConfig.open_in_new == true){
         $(".article a[href]").attr("target", "_blank")
     }
+    
+    //相册需要的js
+	if($(".instagram").length) {
+    	require(['/js/photo.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
+        obj.init();
+    });
+    
     $(".archive-article-title, .github-widget a").attr("target", "_blank");
 
     //随机颜色
