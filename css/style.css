@@ -467,6 +467,12 @@ a {
   #container #footer .footer-right {
     float: initial;
   }
+  #container .scroll {
+    right: 1.2em;
+  }
+  #container .scroll li {
+    font-size: 1.7em;
+  }
 }
 .header-author {
   text-align: center;
@@ -717,6 +723,34 @@ a {
 }
 #disqus_thread {
   padding: 0 40px;
+}
+.scroll {
+  z-index: 999;
+  position: fixed;
+  top: 61.8%;
+  right: 0px;
+  text-align: center;
+}
+.scroll a {
+  display: block;
+  width: 29px;
+  font-size: 28px;
+  background: rgba(215,216,215,0.4);
+  border-bottom: 1px solid #fff;
+}
+.scroll a:last-child {
+  border-bottom: none;
+}
+.scroll .fa {
+  color: rgba(255,255,255,0.8);
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.scroll a:hover {
+  background: rgba(147,181,224,0.3);
+}
+.scroll a:hover .fa {
+  color: #fff;
 }
 .archives-wrap {
   position: relative;
