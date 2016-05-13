@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link href="/favicon.ico" rel="icon" type="image/x-ico">
 <head>
   <meta charset="utf-8">
   
@@ -117,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/books/" style="font-size: 20px;">books</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hexo相册/" style="font-size: 10px;">hexo相册</a> <a href="/tags/yilia主题/" style="font-size: 10px;">yilia主题</a> <a href="/tags/相册/" style="font-size: 10px;">相册</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/books/" style="font-size: 15px;">books</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo相册/" style="font-size: 10px;">hexo相册</a> <a href="/tags/yilia主题/" style="font-size: 20px;">yilia主题</a> <a href="/tags/打赏/" style="font-size: 10px;">打赏</a> <a href="/tags/版权说明/" style="font-size: 10px;">版权说明</a> <a href="/tags/相册/" style="font-size: 10px;">相册</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -253,6 +254,37 @@
       
     
     </div>
+    <!-- 打赏 -->
+    
+      <! -- 添加捐赠图标 -->
+<div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+           &uarr;<br>
+		   欣赏此文？求鼓励，求支持！
+        </span>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- 支付宝打赏图案 -->
+		<img src="/img/zhifubao.png" alt="支付宝打赏"> 
+		<!-- 微信打赏图案 -->
+		<img src="/img/zhifubao1.png" alt="微信打赏">  
+    </div>
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			$('#donate_board').addClass('hidden');
+			$('#donate_guide').removeClass('hidden');
+		}
+	</script>
+</div>
+<! -- 添加捐赠图标 -->
+
+    
+    <!-- 版权说明 -->
+    
+
     
   </div>
   
@@ -272,6 +304,8 @@
 </nav>
 
   
+
+
 </article>
 
 

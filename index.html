@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link href="/favicon.ico" rel="icon" type="image/x-ico">
 <head>
   <meta charset="utf-8">
   
@@ -116,7 +117,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/books/" style="font-size: 20px;">books</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hexo相册/" style="font-size: 10px;">hexo相册</a> <a href="/tags/yilia主题/" style="font-size: 10px;">yilia主题</a> <a href="/tags/相册/" style="font-size: 10px;">相册</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/books/" style="font-size: 15px;">books</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo相册/" style="font-size: 10px;">hexo相册</a> <a href="/tags/yilia主题/" style="font-size: 20px;">yilia主题</a> <a href="/tags/打赏/" style="font-size: 10px;">打赏</a> <a href="/tags/版权说明/" style="font-size: 10px;">版权说明</a> <a href="/tags/相册/" style="font-size: 10px;">相册</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -220,6 +221,11 @@
       
     
     </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
     
     <div class="article-info article-info-index">
       
@@ -248,6 +254,8 @@
     
   </div>
   
+
+
 </article>
 
 
@@ -299,6 +307,11 @@
       
     
     </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
     
     <div class="article-info article-info-index">
       
@@ -327,6 +340,275 @@
     
   </div>
   
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hexo中添加打赏" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/13/hexo中添加打赏/" class="article-date">
+  	<time datetime="2016-05-13T15:02:06.000Z" itemprop="datePublished">2016-05-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/13/hexo中添加打赏/">hexo中添加打赏</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>基本思路是将微信和支付宝的收款二维码放到每篇文章的最后，打赏的时候扫下二维码就可以了。</p>
+      
+    
+    </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yilia主题/">yilia主题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/打赏/">打赏</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/13/hexo中添加打赏/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hexo中添加版权说明" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/13/hexo中添加版权说明/" class="article-date">
+  	<time datetime="2016-05-13T14:59:02.000Z" itemprop="datePublished">2016-05-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/13/hexo中添加版权说明/">hexo中添加版权说明</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a><strong>step 1</strong></h3><p><code>layout\_partial\post\</code> 目录下新建 <code>copyright.ejs</code> 内如如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-footer-copyright"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>本文基于<span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">title</span>=<span class="string">"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"</span> <span class="attr">href</span>=<span class="string">"http://creativecommons.org/licenses/by-sa/4.0/"</span>&gt;</span> 知识共享署名-相同方式共享 4.0<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span>&gt;</span>非商业转载请注明作者及出处,商业转载请联系作者本人。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span>&gt;</span>本文标题为: <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= post.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">post.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span>&gt;</span>本文链接为：<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= post.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">post.permalink</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    
+    </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yilia主题/">yilia主题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/版权说明/">版权说明</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/hexo/">hexo</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/13/hexo中添加版权说明/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/13/test/" class="article-date">
+  	<time datetime="2016-05-13T13:39:33.000Z" itemprop="datePublished">2016-05-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/13/test/">test</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+      
+    
+    </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-简单工厂模式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/10/简单工厂模式/" class="article-date">
+  	<time datetime="2016-05-10T06:55:20.000Z" itemprop="datePublished">2016-05-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/10/简单工厂模式/">简单工厂模式</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+      
+    
+    </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+
 </article>
 
 
@@ -371,6 +653,11 @@
       
     
     </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
     
     <div class="article-info article-info-index">
       
@@ -383,6 +670,8 @@
     
   </div>
   
+
+
 </article>
 
 
@@ -425,6 +714,11 @@
       
     
     </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
     
     <div class="article-info article-info-index">
       
@@ -445,6 +739,8 @@
     
   </div>
   
+
+
 </article>
 
 
