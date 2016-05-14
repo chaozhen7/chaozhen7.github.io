@@ -117,7 +117,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/books/" style="font-size: 15px;">books</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo相册/" style="font-size: 10px;">hexo相册</a> <a href="/tags/yilia主题/" style="font-size: 20px;">yilia主题</a> <a href="/tags/打赏/" style="font-size: 10px;">打赏</a> <a href="/tags/版权说明/" style="font-size: 10px;">版权说明</a> <a href="/tags/相册/" style="font-size: 10px;">相册</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/books/" style="font-size: 15px;">books</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hexo相册/" style="font-size: 10px;">hexo相册</a> <a href="/tags/totop/" style="font-size: 10px;">totop</a> <a href="/tags/yilia主题/" style="font-size: 20px;">yilia主题</a> <a href="/tags/打赏/" style="font-size: 10px;">打赏</a> <a href="/tags/版权说明/" style="font-size: 10px;">版权说明</a> <a href="/tags/相册/" style="font-size: 10px;">相册</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -333,6 +333,77 @@
       
         <p class="article-more-link">
           <a  href="/2016/05/08/相册/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-totop功能" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/14/totop功能/" class="article-date">
+  	<time datetime="2016-05-14T03:30:56.000Z" itemprop="datePublished">2016-05-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/14/totop功能/">totop功能</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在hexo中实现返回顶部相当简单，所有的东西都是模块化的。只要我们写好HTML文件、JS文件，放入相应的目录，然后在对应的网页位置引用就可以了 。<br>以 yilia 主题为例：</p>
+<h3 id="第一步：-编写html代码"><a href="#第一步：-编写html代码" class="headerlink" title="第一步： 编写html代码"></a><strong>第一步： 编写html代码</strong></h3><p><code>layout\_partial</code> 下新建 <code>totop.ejs</code> 输入如下内容：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"totop"</span> <span class="attr">style</span>=<span class="string">"position:fixed;bottom:150px;right:50px;cursor: pointer;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">title</span>=<span class="string">"返回顶部"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/img/scroll.png"</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    
+    </div>
+    <!-- 打赏 -->
+    
+    <!-- 版权说明 -->
+    
+
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/totop/">totop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yilia主题/">yilia主题</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/14/totop功能/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -818,6 +889,12 @@ MathJax.Hub.Queue(function() {
 
  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
  </script> 
+
+ <div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/scroll.png"/></a>
+</div>
+
+<script src="/js/totop.js"></script>
   </div>
 </body>
 </html>
